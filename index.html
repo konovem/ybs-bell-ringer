@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <audio id="myAudio">
+            <source src="sound/bell.wav" type="audio/wav">
+        </audio>
+
+        <button onclick="playSound()">
+            <img src="icon/bell (2).png" alt="" width="100px" height="100px">
+        </button>
+
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+
+        <p class="title-text">
+            ချိုသာသော ခေါင်းလောင်းသံ
+        </p>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        var bellSound = document.getElementById("myAudio");
+
+
+        function playSound() {
+            document.getElementById("myAudio").volume = 1;
+            bellSound.play();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
