@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bell Ringer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/owl.theme.default.min.css">
 </head>
+
 <body>
 
     <div class="container">
 
-        <audio id="myAudio">
-            <source src="sound/bell.wav" type="audio/wav">
-        </audio>
+        <div class="owl-carousel">
+            <div class="item">
+                <audio id="bellSound">
+                    <source src="sound/bell.wav" type="audio/wav">
+                </audio>
 
-        <button onclick="playSound()">
-            <img src="icon/bell (2).png" alt="" width="100px" height="100px">
-        </button>
+                <button onclick="bellSound.play()">
+                    <img src="icon/bell-white.png" alt="bell icon">
+                </button>
 
-        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+                <p class="title-text">
+                    မှတ်တိုင်ပါလျှင် ဘဲ(လ်)တီးပါ။
+                </p>
+            </div>
 
-        <p class="title-text">
-            ချိုသာသော ခေါင်းလောင်းသံ
+            <div class="item">
+                <audio id="policeSound">
+                    <source src="sound/police -siren.wav" type="audio/wav">
+                </audio>
+
+                <button onclick="policeSound.play()">
+                    <img src="icon/alert.png" alt="bell icon">
+                </button>
+
+                <p class="title-text">
+                    ရဲကားအချက်ပေးသံ (အရေးပေါ်အခြေအနေအတွက်)
+                </p>
+            </div>
+
+            <div class="item">
+                <audio id="tornadoSound">
+                    <source src="sound/tornado-siren.wav" type="audio/wav">
+                </audio>
+
+                <button onclick="tornadoSound.play()">
+                    <img src="icon/bell-white.png" alt="bell icon">
+                </button>
+
+                <p class="title-text">
+                    အရေးပေါ် ဥဩဆွဲသံ (အရေးပေါ်အခြေအနေအတွက်)
+                </p>
+            </div>
+
+            
+        </div>
+
+        <!-- Speacial Credit To -->
+
+        <!-- http://soundbible.com -->
+
+        <!-- https://www.flaticon.com -->
+
+        <p class="note">
+            သင့်ဖုန်း၏ အသံခလုတ်ကို ကျယ်ထားရန် မမေ့ပါနှင့်..
         </p>
 
-
+        <footer>
+            Made with 🧡 for You.
+        </footer>
 
 
     </div>
@@ -32,40 +80,42 @@
 
     <script>
 
-        var bellSound = document.getElementById("myAudio");
-
-
-        function playSound() {
-            document.getElementById("myAudio").volume = 1;
-            bellSound.play();
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        var bellSound = document.getElementById("bellSound");
+        var policeSound = document.getElementById("policeSound");
+        var tornadoSound = document.getElementById("tornadoSound");
 
 
 
 
 
     </script>
-    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 0,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+        });
+
+        
+    </script>
+
 </body>
+
 </html>
